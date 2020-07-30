@@ -17,15 +17,13 @@ $.getJSON(url, function(data) {
     var temp_min = main.temp_min;       // 최저 온도
     var temp_max = main.temp_max;       // 최고 온도
     var nowTimestamp = Math.floor(Date.now() / 1000);
-
+    var icon_url ='https://openweathermap.org/img/w/' + icon;
 
     var weatherClass = 'wi wi-owm-';
         weatherClass += (nowTimestamp >= data.sunrise && nowTimestamp <= data.sunset ? 'night' : 'day');
         weatherClass += ('-' + weather[0].id);
 
     $("#weather_info .icon").addClass(weatherClass);
-
-    var icon_url ='https://openweathermap.org/img/w/' + icon;
     $('.city').html(city);
     $('#weather_info .w_id').html(description);
     $('.temp_min').html(parseInt(temp_min-273.15)+'℃');
@@ -44,4 +42,4 @@ var month = today.getMonth() + 1;  // 월
 var date = today.getDate();  // 날짜
 var day = today.getDay();  // 요일
 
-$('.today').html(year + "/ " + month + "/ " + date + " " + "오늘");
+$('.today').html(year + "/ " + month + "/ " + date);
