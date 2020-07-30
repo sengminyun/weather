@@ -1,0 +1,103 @@
+*{
+    margin: 0;
+    font-weight: normal;
+}
+body{
+    color: #333;
+    font-size:100%;
+    font-family: sans-serif;
+}
+li{
+    list-style:none;
+}
+#weather_info{
+    position: relative;
+    width: 100%;
+    border: 1px solid #999;
+    box-sizing: border-box;
+    background:linear-gradient(50deg, rgb(32, 30, 68), rgb(74, 66, 148));
+    color: white;
+    height: 100vh;
+}
+
+section{
+    overflow: hidden;
+    color: #fff;
+    text-shadow: 2px 2px 2px #999;
+    padding: 10px 10px;
+}
+.w-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.city{
+    padding-top: 7%;
+    font-size: 4rem;
+}
+.icon{
+    font-size: 120px !important;
+    padding: 2% 0;
+}
+.w_id{
+    font-size: 1.5rem;
+}
+.temp{
+    font-size: 5rem;
+    padding-bottom: 5%;
+}
+.bt-left{
+    width: 100%;
+    border-bottom: 2px solid #fff;
+    box-shadow: 1px #fff;
+    box-sizing: border-box;
+    font-size: 2rem;
+    float: left;
+    padding-bottom: 1%;
+}
+ul{
+    padding: 0;
+}
+.left-box{
+    float: left;
+    width: 50%;
+    font-size: 1.2rem;
+}
+.right-box{
+    float: right;
+    width: 50%;
+    font-size: 1.2rem;
+}
+ul>li{
+    padding: 10px 5px;
+    border-bottom: 1px solid #fff;
+}
+.humidity, .wind, .temp_max, .temp_min{
+    text-align: right;
+    font-size: 1.3rem;
+}
+section>div>figure>img{
+    width: 100px;
+}
+@media(max-width:375px){
+    .icon{
+        font-size: 70px !important;
+        padding: 10% 0 ;
+    }
+    .temp{
+        font-size: 4rem;
+    }
+    .today, .bt-temp{
+        font-size: 1rem;
+    }
+    aside{
+        padding-top: 30%;
+    }
+    .w_id{
+        font-size: 1rem;
+    }
+    .city{
+        padding-top: 10%;
+    }
+}
