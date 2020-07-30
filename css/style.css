@@ -98,6 +98,7 @@ section>div>figure>img{
         font-size: 1rem;
     }
     .city{
+        font-size: 3rem !important;
         padding-top: 10%;
     }
 }
